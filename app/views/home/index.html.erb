@@ -1,5 +1,6 @@
 <p> Time: <%= @now %> </p>
 <p> Provisioning Uri: <%= @url %> </p>
+<p><%= ROTP::Base32.random_base32 %></p>
 
 <div id="qrcode"></div>
 

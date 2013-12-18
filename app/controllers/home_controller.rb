@@ -17,6 +17,6 @@ class HomeController < ApplicationController
   private 
 
   def load_auth
-    @authenticator = ROTP::TOTP.new("secret")
+    @authenticator = ROTP::TOTP.new("JBSWY3DPEHPK3PXP")
   end
 end
