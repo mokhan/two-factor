@@ -1,8 +1,17 @@
-<%= @message %>
+<p> Time: <%= @now %> </p>
+<p> Provisioning Uri: <%= @url %> </p>
 
-<p>
-<%= @totp.provisioning_uri("mokha@cisco.com") %>
-</p>
-<p>
-<%= @hotp.provisioning_uri("mokha@cisco.com") %>
-</p>
+<div id="qrcode"></div>
+
+<h2>Login</h2>
+
+<%= form_tag("login") do %>
+  <input type="text" name="token" id="token" value="" placeholder="token" />
+  <input type="submit" value="submit" />
+<% end %>
+<h3> <%= flash[:notice] %> </h3>
+
+<% content_for(:javascript) do %>
+  $('#qrcode').qrcode("<%= @url %>")
+<% end %>
+

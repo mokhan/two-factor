@@ -33,7 +33,6 @@ group :doc do
 end
 
 gem 'rotp'
-gem 'rqrcode'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
